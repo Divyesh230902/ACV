@@ -39,6 +39,7 @@ function handleSubmit(event) {
           resultDivText.innerHTML = "The given fruit is " + firstResult;
           // Display the plate image in the result img
           console.log(fruit_img)
+          console.log(firstResult)
           document.getElementById ('image-id').src = fruit_img;
 
 
