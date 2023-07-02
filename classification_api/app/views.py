@@ -17,12 +17,12 @@ import tensorflow as tf
 # Create your views here.
 
 def fruit_classify(img):
-    DATA_DIR = "/Users/divyeshpatel/Desktop/Coding/ACV/Fruit/fruits-360_dataset/fruits-360/Training"
+    DATA_DIR = "/Users/divyeshpatel/Desktop/Coding/7th_sem/ACV/Fruit/fruits-360_dataset/fruits-360/Training/"
     IMG_SIZE = 100
 
     CATEGORIES = [i for i in os.listdir(DATA_DIR) if i != ".DS_Store"]
 
-    model = tf.keras.models.load_model("/Users/divyeshpatel/Desktop/Coding/ACV/fruit_model.model")
+    model = tf.keras.models.load_model("/Users/divyeshpatel/Desktop/Coding/7th_sem/ACV/fruit_model.model/")
     img = cv.imdecode(np.fromstring(img.read(), np.uint8), cv.IMREAD_UNCHANGED)
     img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
     img = cv.resize(img, (IMG_SIZE, IMG_SIZE))
