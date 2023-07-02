@@ -43,6 +43,7 @@ def get_data(request):
     if request.method == "POST":
         print("hello post")
         image = request.FILES["image"]
+        print(image)
         fruit,final_img = fruit_classify(image)
         print(fruit)
         f_img = cv.imencode('.jpg', final_img)
